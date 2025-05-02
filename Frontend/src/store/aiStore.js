@@ -1,8 +1,8 @@
 import { create } from "zustand"
 import axios from "axios"
 
-// const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api" : "/api"
-const API_URL = "https://giffy-mern.onrender.com/api"
+const API_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api" : "/api"
+// const API_URL = "https://giffy-mern.onrender.com/api"
 axios.defaults.withCredentials = true
 
 export const useAiStore = create((set) => ({
