@@ -47,13 +47,11 @@ const Fields = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setOpenModel(true)
-    // console.log(inputarr)
-    // console.log(inputdata)
-    // console.log(MyPromptGenerator(inputarr))
+    // Add current inputdata to inputarr before calling heart
+    const updatedInputArr = [...inputarr, { relationship, age, occasion, interests, budget }];
+    setInputarr(updatedInputArr);
     try {
-      await heart(MyPromptGenerator(inputarr))
-      // console.log(data)
+      await heart(MyPromptGenerator(updatedInputArr))
     } catch (error) {
       console.error(error)
     }
