@@ -1,0 +1,21 @@
+{
+  "name": "giffy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "set NODE_ENV=development&& nodemon Backend/server.js",
+    "start": "set NODE_ENV=production&& node Backend/server.js",
+    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
+  },
+  "author": "ramcharan",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^0.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  },
+  "description": ""
+}
